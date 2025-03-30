@@ -1,0 +1,17 @@
+$(document).ready(function(){
+    $("#faq_1").click(function(){
+        $("#ans_1").toggle();
+    });
+    $("#faq_2").click(function(){
+        $("#ans_2").toggle();
+    });
+    $("#faq_3").click(function(){
+        $("#ans_3").toggle();
+    });
+    $("#faq_4").click(function(){
+        $("#ans_4").toggle();
+    });
+    $("#faq_5").click(function(){
+        $("#ans_5").toggle();
+    });
+  });
