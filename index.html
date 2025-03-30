@@ -10,7 +10,8 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md">
+
+    <nav id="navbar" class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">John's PCs</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +20,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">Promos</a>
-                    <a class="nav-link" href="#">Explore</a>
-                    <a class="nav-link" href="#">Feedback</a>
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link" href="#promo">Promos</a>
+                    <a class="nav-link" href="#product_start">Products</a>
+                    <a class="nav-link" href="#faq_start">FAQ</a>
                 </div>
             </div>
             <div class="icons">
@@ -34,6 +34,8 @@
         </div>
     </nav>
 
+    <a class="jump_button" href="#navbar">UP</a>
+
     <div class="landing_section">
         <div class="landing_section_content">
             <h1>Any Build, Any Parts, <br> Any Time, Anywhere</h1>
@@ -41,7 +43,7 @@
         </div>
     </div>
 
-    <div class="promotion_section">
+    <div id="promo" class="promotion_section">
         <img id="sale_GPU" src="img/GPU.png" alt="GPU">
         <img id="sale_CPU" src="img/CPU.png" alt="CPU">
         <img id="sale_RAM" src="img/RAM.png" alt="RAM">
@@ -56,40 +58,56 @@
     </div>
 
     <div class="categories_section">
-        <h2>Product Categories</h2>
+        <h2 id="product_start">Product Categories</h2>
         <div class="category_grid">
-            <div class="item">
-                <img src="img/cpu_category.png" alt="">
-                <p>CPU</p>
-            </div>
-            <div class="item">
-                <img src="img/gpu_category.png" alt="">
-                <p>Graphics Card</p>
-            </div>
-            <div class="item">
-                <img src="img/ram_category.png" alt="">
-                <p>RAM</p>
-            </div>
-            <div class="item">
-                <img src="img/psu_category.png" alt="">
-                <p>Power Supply</p>
-            </div>
-            <div class="item">
-                <img src="img/nvme_category.png" alt="">
-                <p>Storage</p>
-            </div>
-            <div class="item">
-                <img src="img/motherboard_category.png" alt="">
-                <p>Motherboard</p>
-            </div>
-            <div class="item">
-                <img src="img/cooler_category.png" alt="">
-                <p>Cooling</p>
-            </div>
-            <div class="item">
-                <img src="img/others_category.png" alt="">
-                <p>More...</p>
-            </div>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/cpu_category.png" alt="">
+                    <p>CPU</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/gpu_category.png" alt="">
+                    <p>Graphics Card</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/ram_category.png" alt="">
+                    <p>RAM</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/psu_category.png" alt="">
+                    <p>Power Supply</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/nvme_category.png" alt="">
+                    <p>Storage</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/motherboard_category.png" alt="">
+                    <p>Motherboard</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/cooler_category.png" alt="">
+                    <p>Cooling</p>
+                </div>
+            </a>
+            <a href="products.html">
+                <div class="item">
+                    <img src="img/others_category.png" alt="">
+                    <p>More...</p>
+                </div>
+            </a>
         </div>
         <h2>Services</h2>
         <div class="category_grid">
@@ -115,36 +133,36 @@
         </div>
     </div>
 
-    <div class="faq_section">
+    <div id="faq_start" class="faq_section">
         <h2>FAQ</h2>
         <div>
-            <button id="faq_1">Toggle between hiding and showing the paragraphs?</button>
+            <button id="faq_1">Who is the founder of this company?</button>
             <div id="ans_1" class="faq_answer">
-                  <p>This is a paragraph with little content.</p>
+                  <p>The CEO is John Bob P. Computer.</p>
             </div>
         </div>
         <div>
-            <button id="faq_2">Toggle between hiding and showing the paragraphs?</button>
+            <button id="faq_2">What products do you sell?</button>
             <div id="ans_2" class="faq_answer">
-                  <p>This is a paragraph with little content.</p>
+                  <p>We offer a wide range of computer products, including desktops, laptops, gaming PCs, accessories (keyboards, mice, monitors, etc.), computer components (RAM, CPUs, GPUs, hard drives), software, and more. Whether you're a casual user or a gamer, we have something for everyone!</p>
             </div>
         </div>
         <div>
-            <button id="faq_3">Toggle between hiding and showing the paragraphs?</button>
+            <button id="faq_3">Can I cancel or modify my order after it's placed?</button>
             <div id="ans_3" class="faq_answer">
-                  <p>This is a paragraph with little content.</p>
+                  <p>Once your order has been processed and shipped, it cannot be modified or canceled. However, if your order hasn't shipped yet, please contact our customer support as soon as possible, and we'll do our best to accommodate changes.</p>
             </div>
         </div>
         <div>
-            <button id="faq_4">Toggle between hiding and showing the paragraphs?</button>
+            <button id="faq_4">How do I track my order?</button>
             <div id="ans_4" class="faq_answer">
-                  <p>This is a paragraph with little content.</p>
+                  <p>Once your order is shipped, we'll send you a tracking number via email. You can use this number to track the status of your package on our website or with the carrier.</p>
             </div>
         </div>
         <div>
-            <button id="faq_5">Toggle between hiding and showing the paragraphs?</button>
+            <button id="faq_5">What should I do if my product arrives damaged?</button>
             <div id="ans_5" class="faq_answer">
-                  <p>This is a paragraph with little content.</p>
+                  <p>If your product is damaged upon arrival, please contact our customer support team immediately. We'll assist you with a return, replacement, or refund, depending on the situation.</p>
             </div>
         </div>
     </div>
