@@ -50,9 +50,51 @@ $(document).ready(function(){
 
     var selectedCategory = localStorage.getItem('selectedCategory');
 
+    localStorage.setItem('selectedCategory', $("#select_test").val());
+
     if(selectedCategory) {
         $("#select_test").val(selectedCategory);
     }
+
+    $(".product_card").parent("a").click(function() {
+        var productCard = $(this).find(".product_card");
+        var imageElement = productCard.find(".product_image img");
+        var imageSrc = imageElement.attr("src");
+        var title = productCard.find(".product_title").text();
+        var price = productCard.find(".product_price").text();
+        var rating = productCard.find(".product_rating").text();
+
+        localStorage.setItem('selectedImageSrc', imageSrc);
+        localStorage.setItem('selectedTitle', title);
+        localStorage.setItem('selectedPrice', price);
+        localStorage.setItem('selectedRating', rating);
+    });
+
+    var selectedImageSrc = localStorage.getItem('selectedImageSrc');
+    var selectedTitle = localStorage.getItem('selectedTitle');
+    var selectedPrice = localStorage.getItem('selectedPrice');
+    var selectedRating = localStorage.getItem('selectedRating');
+    
+    $(".specific_product_title").text(selectedTitle);
+    $(".specific_product_price").text(selectedPrice);
+    $(".specific_product_rating").text(selectedRating);
+    $(".specifics_section_image img").attr("src", selectedImageSrc);
+
+    var quantityInput = document.querySelector('.quantity_input');
+    var decreaseBtn = document.getElementById('decrease');
+    var increaseBtn = document.getElementById('increase');
+    
+    decreaseBtn.addEventListener('click', function() {
+        var currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+    
+    increaseBtn.addEventListener('click', function() {
+        var currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+    });
 
 });
 
@@ -115,7 +157,7 @@ setInterval(function(){
     }
 
     if(specific == true){
-        $(".product-card h3").text("Sample " + itemName);
+        $(".product_card h3").text("Sample " + itemName);
 
         $("#product_1 img").attr("src","img/" + img_category +"_1."+ img_type);
         $("#product_1 p").text(prices[0]);
@@ -143,7 +185,7 @@ setInterval(function(){
         $("#product_8 h6").text("★ " + ratings[7] + " | " + sold[7] + " items sold");
     }
     else{
-        $(".product-card h3").text("Sample Products");
+        $(".product_card h3").text("Sample Products");
         $("#product_1 img").attr("src","img/" + "cpu_1.webp");
         $("#product_1 p").text("₱12,700");
         $("#product_2 img").attr("src","img/" + "gpu_1.png");
